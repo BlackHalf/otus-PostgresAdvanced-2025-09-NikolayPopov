@@ -50,6 +50,10 @@
 
 ![alt text](image-9.png)
 
+Редактируем файл настроек.  ```mcedit /etc/postgresql/18/main/postgresql.conf```
+
+![alt text](image-12.png)
+
 Запускаем кластер и проверяем
 
 ![alt text](image-10.png)
