@@ -26,11 +26,15 @@
 
 Пока оставляем synchronous_commit = on 
 
-Рестартуем sudo systemctl restart postgresql@17-main.service
+Рестартуем 
+
+```
+sudo systemctl restart postgresql@17-main.service
+```
 
 4. Проверьте, насколько выросла производительность.
 
-Проверяем, получаем 208 транзакций в секунду. Более чем вдвое выше!
+Проверяем, получаем 208 транзакций в секунду. Результат улучшился в 2 раза!
 
 ![alt text](image-4.png)
 
