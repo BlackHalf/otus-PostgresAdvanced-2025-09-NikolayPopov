@@ -3,8 +3,10 @@
      
 Разверни CockroachDB в облаке
 ```
-Будем использовать те же машины, что и для патрони. Останавливаем постгри и патрони, ставим CockroachDB
+Будем использовать те же машины, что и для патрони. Останавливаем постгри и патрони, ставим CockroachDB.
+
 Оказывается, что все репо производителя ПО банят и адреса РФ и все прокси, получаем 403 Frobidden
+
 Единственный доступный вариант получить бинарники - репо Garuda Linux
 
 ```
@@ -54,7 +56,7 @@ cockroach node status --certs-dir=certs
 wget --continue --progress=dot:giga 'https://datasets.clickhouse.com/hits_compatible/hits.csv.gz' -O /tmp/hits.csv.gz
 # Make data file available in "extern" directory, so it can be loaded via nodelocal
 sudo mkdir -p ./extern
-gzip -d -c /tmp/hits.csv.gz | sudo tee $CRDBDATADIR/extern/hits.csv > /dev/null
+gzip -d -c /tmp/hits.csv.gz | sudo tee ./extern/hits.csv > /dev/null
 head -n1000000 hits.csv > trunk.csv
 ```
 Теперь создаем БД, таблицу и делаем импорт
