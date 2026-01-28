@@ -187,6 +187,10 @@ IMPORT INTO hits(WatchID, JavaEnable, Title, GoodEvent, EventTime, EventDate, Co
 Сравни производительность запросов с однопользовательским инстансом PostgreSQL
 
 ```
+Будем использовать запросы из HW 9 
+
+```
+
 SELECT COUNT(DISTINCT UserID) FROM hits;
   count
 ---------
