@@ -217,8 +217,8 @@ Time: 372.515 ms
 Результаты показали достаточно высокую скорость выполнения запросов, в том числе тех, что рассчитаны на колоночное хранение. Видимо, это обусловлено схожей моделью хранения данных.
 
 Справка 
-```
+
 ClickHouse® uses the MergeTree family of storage engines. Data is written in parts that are continuously merged in the background. This design favors batch inserts and append-only workloads, making it fast for ingesting millions of rows at once but slower for frequent updates to individual rows.
 
 YugabyteDB uses a Log-Structured Merge (LSM) tree with its DocDB storage layer. LSM trees handle both reads and writes efficiently for transactional workloads, though they require periodic compaction to maintain performance as data accumulates.
-```
+
